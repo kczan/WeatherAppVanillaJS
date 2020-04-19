@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -79,5 +79,10 @@ body {
 
 .degree-section h2 {
   font-size: 40px;
+}
+
+.footer-paragraph {
+  color: grey;
+  font-size: 0.8rem;
 }
 /*# sourceMappingURL=main.css.map */

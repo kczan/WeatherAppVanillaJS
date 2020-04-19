@@ -47,7 +47,10 @@ function locatedWeather(city){
 }
 
 function roundTemperature(temp) {
-  let numTemp = parseFloat(temp)
-  return numTemp.toPrecision(3);
+  try{
+    return temp.toFixed(1);
+  } catch {
+    status.innerHTML = 'There seems to be an error of OpenWeather services! Please contact them about that issue.'
+  }
 }
 
