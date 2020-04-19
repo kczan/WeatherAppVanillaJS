@@ -22,15 +22,27 @@ cityInput.addEventListener("keyup", event => {
 
 function locatedWeather(city){
   const xhr = new XMLHttpRequest();
-  xhr.open('GET', `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=3b1429d5efe30b361baa6a74a9324de4`);
-  xhr.onload = () => {
-    const weatherData = JSON.parse(xhr.responseText);
-    cityName.innerHTML = weatherData.name;
-    temperature.innerHTML = roundTemperature(weatherData.main.temp);
-    weatherIcon.src = `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`;
-    degree.style.visibility = 'visible';
-    temperatureDescription.innerHTML = weatherData.weather[0].description;
+
+  xhr.onreadystatechange = () => {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      const weatherData = JSON.parse(xhr.responseText);
+      cityName.innerHTML = weatherData.name;
+      temperature.innerHTML = roundTemperature(weatherData.main.temp);
+      weatherIcon.src = `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`;
+      degree.style.visibility = 'visible';
+      temperatureDescription.innerHTML = weatherData.weather[0].description;
+    }
   }
+
+  xhr.open('GET', `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=3b1429d5efe30b361baa6a74a9324de4`);
+  // xhr.onload = () => {
+  //   const weatherData = JSON.parse(xhr.responseText);
+  //   cityName.innerHTML = weatherData.name;
+  //   temperature.innerHTML = roundTemperature(weatherData.main.temp);
+  //   weatherIcon.src = `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`;
+  //   degree.style.visibility = 'visible';
+  //   temperatureDescription.innerHTML = weatherData.weather[0].description;
+  // }
   xhr.send();
 }
 
