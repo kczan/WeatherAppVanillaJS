@@ -8,7 +8,7 @@
 }
 
 body{
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -18,7 +18,7 @@ body{
 }
 
 .location, .temperature{
-  height: 30vh;
+  height: 20vh;
   width: 50%;
   display: flex;
   justify-content: space-around;
@@ -61,23 +61,24 @@ body{
 .footer-paragraph{
   color: grey;
   font-size: 0.8rem;
+  padding: 5px 10px;
 }
 
 .venue {
   width: 275px;
   padding: 20px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  background: linear-gradient(#3d68e0, #261046);;
 }
 
 .venueimage {
-  margin-top: 20px;
+  margin: 10px 0;
 }
 
 #venues h2 {
   font-family: Work Sans;
   font-size: 22px;
-  font-weight: 600;
-  line-height: 0.77;
+  // font-weight: 600;
   text-align: center;
   padding-top: 5px;
 }
@@ -88,7 +89,6 @@ body{
   justify-content: space-around;
   min-height: 250px;
   visibility: hidden;
-  background: linear-gradient(#3d68e0, #261046);;
 }
 
 #venues-title {
@@ -101,6 +101,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100px;
   }
   .venue {
     margin: 10px auto;
