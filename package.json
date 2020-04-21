@@ -1,0 +1,22 @@
+{
+  "name": "weather_app",
+  "version": "1.0.0",
+  "description": "Simple weather app using Vanilla JS.  GeoLocation not implemented because of https issues.",
+  "main": "app.js",
+  "scripts": {
+    "deploy": "gh-pages-deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kczan/WeatherAppVanillaJS.git"
+  },
+  "author": "kczan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kczan/WeatherAppVanillaJS/issues"
+  },
+  "homepage": "http://kczan.github.io/WeatherAppVanillaJS",
+  "dependencies": {
+    "gh-pages": "^2.2.0"
+  }
+}
