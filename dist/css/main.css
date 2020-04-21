@@ -85,4 +85,74 @@ body {
   color: grey;
   font-size: 0.8rem;
 }
+
+.venue {
+  width: 275px;
+  padding: 20px;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.venueimage {
+  margin-top: 20px;
+}
+
+#venues h2 {
+  font-family: Work Sans;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 0.77;
+  text-align: center;
+  padding-top: 5px;
+}
+
+#venues {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  min-height: 250px;
+  visibility: hidden;
+  background: -webkit-gradient(linear, left top, left bottom, from(#3d68e0), to(#261046));
+  background: linear-gradient(#3d68e0, #261046);
+}
+
+#venues-title {
+  margin-bottom: 10px;
+  visibility: hidden;
+}
+
+@media (max-width: 600px) {
+  #venues {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .venue {
+    margin: 10px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 80%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 /*# sourceMappingURL=main.css.map */

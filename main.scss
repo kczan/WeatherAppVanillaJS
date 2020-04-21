@@ -62,3 +62,52 @@ body{
   color: grey;
   font-size: 0.8rem;
 }
+
+.venue {
+  width: 275px;
+  padding: 20px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.venueimage {
+  margin-top: 20px;
+}
+
+#venues h2 {
+  font-family: Work Sans;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 0.77;
+  text-align: center;
+  padding-top: 5px;
+}
+
+#venues {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  min-height: 250px;
+  visibility: hidden;
+  background: linear-gradient(#3d68e0, #261046);;
+}
+
+#venues-title {
+  margin-bottom: 10px;
+  visibility: hidden;
+}
+
+@media (max-width: 600px) {
+  #venues {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .venue {
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+  }
+  
+}
