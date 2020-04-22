@@ -101,11 +101,17 @@ const renderWeather = (weatherData) => {
 // event handlers
 
 locate.addEventListener('click', () => {
-  cityData = cityInput.value;
-  getWeather(cityData)
-    .then(forecast => renderWeather(forecast));
-  getVenues()
-    .then(venues => renderVenues(venues));
+  if (cityInput.value != ''){
+    status.style.visibility = 'hidden';
+    cityData = cityInput.value;
+    getWeather(cityData)
+      .then(forecast => renderWeather(forecast));
+    getVenues()
+      .then(venues => renderVenues(venues));
+  } else {
+    status.style.visibility = 'visible';
+    status.innerHTML = 'Please type in a city.';
+  }
 });
 
 cityInput.addEventListener("keyup", event => {

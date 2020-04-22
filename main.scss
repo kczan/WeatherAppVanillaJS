@@ -18,29 +18,81 @@ body{
 }
 
 .location, .temperature{
-  height: 20vh;
+  height: 15vh;
   width: 50%;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: relative;
+  top: 70px;
+}
+
+.location {
+  top: 110px;
+}
+
+#status{
+  visibility: hidden;
+  position: absolute;
+  top: 110px;
 }
 
 .temperature{
   flex-direction: column;
+  margin-bottom: 40px;
 }
 
 .city-input{
-  border-radius: 35%;
-  height: 40px;
-  width: 200px;
-  text-align: center;
-  margin: 10px;
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  line-height: 40px;
+  width: 0px;
+  font-weight: bold;
+  -webkit-transition: all 0.7s ease 0s;
+	-moz-transition: all 0.7s ease 0s;
+	-o-transition: all 0.7s ease 0s;
+	transition: all 0.7s ease 0s;
+}
+
+.search-container {
+  transform: translate(-50%, -50%);
+  background: #2f3640;
+  height: 60px;
+  border-radius: 40px;
+  padding: 10px;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  margin-bottom: 30px;
 }
 
 .location-button{
+  float: right;
+  width: 40px;
   height: 40px;
-  width: 120px;
-  background: linear-gradient(#ADCAD6, #F18F01);
+  border-radius: 50%;
+  background: #2f3640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  color: white;
+  cursor: pointer;
+}
+
+.search-container:hover > .city-input {
+  width: 200px;
+  padding: 0 6px;
+}
+
+.search-container:hover > .location-button {
+  background: white;
+  color: black;
 }
 
 .degree-section{
@@ -92,6 +144,7 @@ body{
 }
 
 #venues-title {
+  margin-top: 105px;
   margin-bottom: 10px;
   visibility: hidden;
 }
@@ -111,4 +164,14 @@ body{
     align-items: center;
   }
   
+  .city-input {
+    width: 80%;
+    max-width: 200px;
+    padding: 0 6px;
+
+  }
+  
+  .search-container {
+    width: 280px;
+  }
 }

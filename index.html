@@ -4,15 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://kit.fontawesome.com/7a8981022c.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href='dist/css/main.css'/>
   <title>Weather</title>
 </head>
 <body>
-<div class='geolocation-confirm'>
-  <input id='city' class='city-input' type="text" placeholder="City">
-  <button id='locate' class='location-button'>Check weather!</button>
-  <p id='status'></p>
+<div class='search-container'>
+  <input id='city' class='city-input' type="text" placeholder="City" autocomplete="off">
+  <button id='locate' class='location-button'><i class="fas fa-cloud-sun"></i></button>
 </div>
+<p id='status'></p>
 <div class="location">
   <h1 id='city-name' class="location-timezone"></h1>
   <img src="" id='weather-icon'>
