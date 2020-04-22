@@ -28,7 +28,7 @@ body {
 }
 
 .location, .temperature {
-  height: 20vh;
+  height: 15vh;
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -38,6 +38,18 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  top: 70px;
+}
+
+.location {
+  top: 110px;
+}
+
+#status {
+  visibility: hidden;
+  position: absolute;
+  top: 110px;
 }
 
 .temperature {
@@ -45,21 +57,66 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 40px;
 }
 
 .city-input {
-  border-radius: 35%;
-  height: 40px;
-  width: 200px;
-  text-align: center;
-  margin: 10px;
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  line-height: 40px;
+  width: 0px;
+  font-weight: bold;
+  -webkit-transition: all 0.7s ease 0s;
+  transition: all 0.7s ease 0s;
+}
+
+.search-container {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #2f3640;
+  height: 60px;
+  border-radius: 40px;
+  padding: 10px;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  margin-bottom: 30px;
 }
 
 .location-button {
+  float: right;
+  width: 40px;
   height: 40px;
-  width: 120px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ADCAD6), to(#F18F01));
-  background: linear-gradient(#ADCAD6, #F18F01);
+  border-radius: 50%;
+  background: #2f3640;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  color: white;
+  cursor: pointer;
+}
+
+.search-container:hover > .city-input {
+  width: 200px;
+  padding: 0 6px;
+}
+
+.search-container:hover > .location-button {
+  background: white;
+  color: black;
 }
 
 .degree-section {
@@ -122,6 +179,7 @@ body {
 }
 
 #venues-title {
+  margin-top: 105px;
   margin-bottom: 10px;
   visibility: hidden;
 }
@@ -153,6 +211,14 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .city-input {
+    width: 80%;
+    max-width: 200px;
+    padding: 0 6px;
+  }
+  .search-container {
+    width: 280px;
   }
 }
 /*# sourceMappingURL=main.css.map */
